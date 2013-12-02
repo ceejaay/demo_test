@@ -1,0 +1,2 @@
+This is a prototype of a one-click demo. Creates orgs, users and adds all the components neccessary to to start a demo.
+

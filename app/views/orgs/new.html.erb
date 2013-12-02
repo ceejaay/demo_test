@@ -1,0 +1,9 @@
+<h1>New Org</h1>
+
+<%= form_for :orgs, url: orgs_path  do |f| %>
+  <p>
+    <%= f.label "Name of Org" %>
+    <%= f.text_field :name %>
+    <%= f.submit "Demo Me!" %>
+  </p>
+<% end %>
