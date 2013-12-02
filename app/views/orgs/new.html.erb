@@ -6,6 +6,12 @@
   </p>
   <p>
     <%= f.text_field :name %>
+      <%= f.fields_for :user do |user| %>
+        <%= user.label "First Name" %>
+        <%= user.text_field :first_name %>
+        <%= user.label "Last Name" %>
+        <%= user.text_field :last_name %>
+      <% end %>
     <%= f.submit "Demo Me!" %>
   </p>
 <% end %>

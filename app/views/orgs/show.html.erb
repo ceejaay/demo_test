@@ -7,3 +7,15 @@
     <strong>Demo:</strong>
     <%= @org.demo %>
   </p>
+
+
+  <h1>Add a User</h1>
+
+  <%= form_for([@org, @org.users.build ]) do |u| %>
+    <%= u.label "First Name" %>
+    <%= u.text_field :first_name %>
+    <%= u.label "Last Name" %>
+    <%= u.text_field :last_name %>
+    <%= u.submit "New User" %>
+
+  <% end %>

@@ -1,0 +1,7 @@
+<h1>Orgs</h1>
+
+<% @org.each do |o| %>
+    <%= o.name %>
+    <%= o.demo %>
+    <%= link_to "See org", o %>
+<% end %>

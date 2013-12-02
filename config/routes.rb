@@ -1,7 +1,9 @@
 DemoTest::Application.routes.draw do
   get "welcome/index"
   root :to => "welcome#index"  
-  resources :orgs
+  resources :orgs do
+    resources :users
+  end
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
