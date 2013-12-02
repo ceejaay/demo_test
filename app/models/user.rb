@@ -1,4 +1,4 @@
 class User < ActiveRecord::Base
-  attr_accessible :first_name, :last_name, :prerequisite_attributes
+  attr_accessible :first_name, :last_name 
   belongs_to :org
 end
