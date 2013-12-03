@@ -1,0 +1,17 @@
+<h1>Demos new</h1>
+
+<%= form_for @org do |f| %>
+  <p>
+    <%= f.label "Name of Org" %>
+  </p>
+  <p>
+    <%= f.text_field :name %>
+      <%= f.fields_for :users do |user| %>
+        <%= user.label "First Name" %>
+        <%= user.text_field :first_name %>
+        <%= user.label "Last Name" %>
+        <%= user.text_field :last_name %>
+      <% end %>
+    <%= f.submit "Demo Me!" %>
+  </p>
+<% end %>

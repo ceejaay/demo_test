@@ -1,4 +1,8 @@
 DemoTest::Application.routes.draw do
+  get "demos/new"
+
+  get "demos/create"
+
   get "welcome/index"
   root :to => "welcome#index"  
   resources :orgs do
