@@ -1,7 +1,6 @@
 class DemosController < ApplicationController
   def new
     @org = Org.new
-    @org.demo = true
     @org.users.new(params[:user])
   end 
   
