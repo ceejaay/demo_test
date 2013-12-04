@@ -3,5 +3,10 @@
 
 <%= form_tag("/orgs", action: 'create', method: 'post') do  %>
   <%= label_tag "New Org" %> 
-  <%= text_field_tag "org_name", nil, org:  %> 
+  <%= text_field( :org, :name)%> 
+  <%= label_tag "New User First Name" %> 
+  <%= text_field( :user, :first_name)%> 
+  <%= label_tag "New User Last Name" %> 
+  <%= text_field( :user, :last_name)%> 
+  <%= button_to("Demo Me", method: 'post') %>
 <% end %>
