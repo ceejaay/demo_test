@@ -8,7 +8,7 @@ class DemosController < ApplicationController
     @org = Org.new(params[:org])
     @org.demo = true
     @org.save
-    Account.create(org_id: @org.id, user_id: @org.user.last.id)
+    #Account.create(org_id: @org.id, user_id: @org.user.last.id)
     redirect_to @org
   end
 end

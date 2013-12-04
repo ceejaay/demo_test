@@ -15,7 +15,13 @@
     <% end %>
   </p>
   
-
+  <p>
+    <strong>Orgs</strong>
+    <% @org.accounts.each do |a| %>
+      <%= a.org_id %>
+      <%= a.user_id %></br>
+    <% end %>
+  </p>
   <h1>Add a User</h1>
 
   <%= form_for([@org, @org.users.build ]) do |u| %>
