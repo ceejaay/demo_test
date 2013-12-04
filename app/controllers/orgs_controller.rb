@@ -10,7 +10,7 @@ class OrgsController < ApplicationController
     @org = Org.new(params[:org])
     @org.demo = true
     @org.save
-    Account.create(org_id: @org.id, user_id: @org.users.first.id)
+    #Account.create(org_id: @org.id, user_id: @org.users.first.id)
     redirect_to @org
   end
 

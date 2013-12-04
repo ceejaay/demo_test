@@ -1,27 +1,37 @@
 <h1>Org</h1>
-  <p>
-    <strong>Org Name:</strong>
-    <%= @org.name %>
-  </p>
-  <p>
-    <strong>Demo:</strong>
-    <%= @org.demo %>
-  </p>
-  <p>
-    <strong>Users</strong>
+  <table border='1'>
+    <tr>
+    <th><strong>Org Name:</strong></th>
+    <th><strong>Org ID</strong></th>
+    <th><strong>Org Demo</strong></th>
+    <tr>
+   <td> <%= @org.name %></td>
+    <td> <%= @org.id %></td>
+    <td><%= @org.demo %></td>
+  </table>
+  <table border='1'>
+    </tr>
+      <th><strong>User First Name</strong></th>
+      <th><strong>User Last Name</strong></th>
+      <th><strong>User ID.</strong></th>
+      <th><strong>Account Org ID</strong></th>
+      <th><strong>Account User ID</strong></th>
+    </tr>
+
+    <tr>
+   
     <% @org.users.each do |u| %>
-      <%= u.first_name %>
-      <%= u.last_name %></br>
+     <tr>
+     <td><%= u.first_name %></td>
+      <td><%= u.last_name %></td>
+      <td><%= u.id %></td>
     <% end %>
-  </p>
-  
-  <p>
-    <strong>Orgs</strong>
     <% @org.accounts.each do |a| %>
-      <%= a.org_id %>
-      <%= a.user_id %></br>
+      <td><%= a.org_id %></td>
+      <td><%= a.user_id %></td>
+    </tr>
     <% end %>
-  </p>
+</table>
   <h1>Add a User</h1>
 
   <%= form_for([@org, @org.users.build ]) do |u| %>
